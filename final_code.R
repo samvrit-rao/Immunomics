@@ -1,19 +1,3 @@
-#library defining----
-
-library(factoextra)
-library(FactoMineR)
-library(tidyverse)
-library(BSDA)
-library(corrplot)
-library(tidyverse)
-library(data.table)
-library(dplyr)
-library(ggplot2)
-library(ggrepel)
-library(enrichR)
-library(ggthemes)
-
-#PCA Formatting --------------------------------------------------------------------------------------------------------------------------
 eig.val <- get_eigenvalue(PCA_Overall)
 eig.val
 
@@ -67,6 +51,24 @@ fviz_eig(PCA_B, addlabels = TRUE, ylim = c(0, 50))
 fviz_eig(PCA_Overall, addlabels = TRUE, ylim = c(0, 50))
 fviz_eig(PCA_HCConv, addlabels = TRUE, ylim = c(0, 50))
 fviz_eig(PCA_Mildsev, addlabels = TRUE, ylim = c(0, 50))
+
+#library defining----
+
+library(factoextra)
+library(FactoMineR)
+library(tidyverse)
+library(BSDA)
+library(corrplot)
+library(tidyverse)
+library(data.table)
+library(dplyr)
+library(ggplot2)
+library(ggrepel)
+library(enrichR)
+library(ggthemes)
+
+#PCA Formatting --------------------------------------------------------------------------------------------------------------------------
+
 
 convhc <- slice(prot_cov_2, 1:31)
 mildsev <- slice(prot_cov_2, 32:69)
